@@ -23,4 +23,20 @@ I choose [Google Cloud Platform(GCP)](http://console.cloud.google.com) for this 
 
 >Operating system: Ubuntu 20.04 LTS Minimal
 
+SSH connect to WM
+
+To check for new updates run: `sudo apt update`
+
+To update list package `sudo apt upgrade`
+
+### change default password of root: `sudo passwd root` 
+
+>password for root : 12345678
+
+Create a non-root accout:
+password:123456
+user name: xtang
+password: 123456
+
+
 
