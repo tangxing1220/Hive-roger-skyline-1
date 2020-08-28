@@ -1,0 +1,26 @@
+[sshd]
+enabled = true
+port	= 65534
+filter	= sshd
+logpath	= %(sshd_log)s
+maxretry = 5
+bantime = 300
+banaction = iptables-multiport
+
+[portscan]
+enabled = true
+filter	= portscan
+logpath = /var/log/syslog
+bantime = 300
+findtime = 300
+maxretry = 1
+
+[http-get-dos]
+enabled = true
+port	= http,https
+filter	= http-get-dos
+logpath	= /var/log/apache2/access.log
+maxretry = 50
+findtime = 300
+bantime =  300
+action	= iptables[name=HTTP, port=http, protocol=tcp]
